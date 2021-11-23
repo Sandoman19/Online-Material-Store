@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS material_db;
+
+CREATE DATABASE material_db;
