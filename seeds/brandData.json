@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0", 
+    "name": "EssaStone", 
+    "product_id": "0"
+  },  
+  {
+    "id": "1", 
+    "name": "QStone", 
+    "product_id": "0"
+  },  
+  {
+    "id": "2", 
+    "name": "CaesarStone", 
+    "product_id": "0"
+  },  
+  {
+    "id": "3", 
+    "name": "Stone Ambassador", 
+    "product_id": "0"
+  },  
+  {
+    "id": "4", 
+    "name": "Formica", 
+    "product_id": "1"
+  },  
+  {
+    "id": "5", 
+    "name": "Laminex", 
+    "product_id": "1"
+  }
+]

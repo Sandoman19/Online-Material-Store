@@ -1,1 +1,17 @@
-/* add users */
+[
+  {
+    "name": "Sando",
+    "email": "aaron@charactercabinets.com.au",
+    "password": "password12345"
+  },
+  {
+    "name": "Daniel",
+    "email": "dancore99@outlook.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Sophie",
+    "email": "s.dejong057@gmail.com",
+    "password": "password12345"
+  }
+]

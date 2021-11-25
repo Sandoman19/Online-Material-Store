@@ -1,0 +1,82 @@
+[
+  {
+    "colour": "Chalkstone",
+    "brand_id": "0",
+    "finish": "Gloss",
+    "length": "2000",
+    "width": "650",
+    "thickness": "20",
+    "price": "131.01",
+    "product_code": "979046"    
+  },
+  {
+    "colour": "Chalkstone",
+    "brand_id": "0",
+    "finish": "Gloss",
+    "length": "2500",
+    "width": "1000",
+    "thickness": "20",
+    "price": "131.01",
+    "product_code": "979046"    
+  },  
+  {
+    "colour": "Terrazzino",
+    "brand_id": "0",
+    "finish": "Gloss",
+    "length": "2100",
+    "width": "700",
+    "thickness": "20",
+    "price": "150.38",
+    "product_code": "985714"    
+  },
+  {
+    "colour": "Grey Glitter",
+    "brand_id": "1",
+    "finish": "Gloss",
+    "length": "1500",
+    "width": "1600",
+    "thickness": "20",
+    "price": "89.00",
+    "product_code": "970263"    
+  },
+  {
+    "colour": "Snow",
+    "brand_id": "2",
+    "finish": "Polished",
+    "length": "2850",
+    "width": "750",
+    "thickness": "20",
+    "price": "111.89",
+    "product_code": "1214132000"    
+  },
+  {
+    "colour": "New Frost",
+    "brand_id": "1",
+    "finish": "Gloss",
+    "length": "900",
+    "width": "1000",
+    "thickness": "20",
+    "price": "139.00",
+    "product_code": "DISCONTINUED"    
+  },
+  {
+    "colour": "Unique Calcatta",
+    "brand_id": "0",
+    "finish": "Gloss",
+    "length": "1100",
+    "width": "900",
+    "thickness": "20",
+    "price": "445.12",
+    "product_code": "982753"    
+  },
+  {
+    "colour": "Trinity",
+    "brand_id": "3",
+    "finish": "Polished",
+    "length": "1900",
+    "width": "800",
+    "thickness": "20",
+    "price": "261.22",
+    "product_code": "SA-TY1541"    
+  }
+]
