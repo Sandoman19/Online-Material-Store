@@ -1,7 +1,7 @@
 // importing express.route
 const router = require("express").Router();
 // import product routes
-const productRoutes = require("./productRoute");
+const productRoutes = require("./productsRoute");
 // import user routes
 const userRoutes = require("./userRoutes");
 // import productType routes

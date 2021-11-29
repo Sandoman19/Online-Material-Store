@@ -1,5 +1,6 @@
 //Import express router, models and auth
 const router = require("express").Router();
+
 // importing models
 const { User } = require("../models");
 const withAuth = require("../units/auth");

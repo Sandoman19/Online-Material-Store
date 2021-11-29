@@ -4,7 +4,7 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 //Create a new user
-router.post("/new_user", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newUser = req.body;
     // hash the password from 'req.body' and save to newUser

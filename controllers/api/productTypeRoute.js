@@ -4,7 +4,7 @@ const router = require("express").Router();
 const { Product_Type, Product } = require("../../models");
 
 // GET of products
-router.get("/product_type", (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const productTypeData = await Product_Type.findAll({
       include: [{ model: Product, atrributes: "name" }],
@@ -23,7 +23,7 @@ router.get("/product_type", (req, res) => {
 });
 
 // GET of products by id
-router.get("/:id", (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const productTypeData = await Product_Type.findByPk(req.params.id, {
       include: [
@@ -44,7 +44,7 @@ router.get("/:id", (req, res) => {
   }
 });
 // POST of products
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const NewProductType = Product_Type.create({
       ...req.body,
@@ -74,7 +74,7 @@ router.put("/:id", (req, res) => {
     });
 });
 // DELETE of products
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const productTypeData = await Product_Type.destroy({
       where: {
@@ -90,3 +90,4 @@ router.delete("/:id", (req, res) => {
   }
 });
 // export
+module.exports = router;

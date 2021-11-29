@@ -13,7 +13,6 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const app = express();
 
 //
-const hbs = exphbs.create({ helpers });
 
 // set port
 const PORT = process.env.PORT || 3001;
