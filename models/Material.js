@@ -9,6 +9,7 @@ Material.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
+      primaryKey: true,
     },
     colour: {
       type: DataTypes.STRING,
@@ -37,15 +38,20 @@ Material.init(
     price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
-    },   
+    },
     brand_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'brand',
-        key: 'id',
+        model: "brand",
+        key: "id",
+      },
+      product_id: {
+        references: {
+          model: "product",
+          key: "id",
+        },
       },
     },
-
   },
   {
     sequelize,
