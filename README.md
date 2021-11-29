@@ -7,5 +7,14 @@ as a user, I would like to READ and access a database of materials
 as a user, I would like to add selected materials to the cart
 as a user, I would like to confirm items in chat and receive an invoice to my email
 
+Sando:
+models and seeds
+
+Dan:
+config, controllers and view
+
+Sophie:
+view
+
 workout how bcrypt will be getting use
 what framework we should use
