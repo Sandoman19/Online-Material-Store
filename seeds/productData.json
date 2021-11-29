@@ -1,1 +1,14 @@
-/* add stone products */
+[
+  {
+    "id": "0", 
+    "name": "Stone" 
+  },
+  {
+    "id": "1", 
+    "name": "Pre Finnished Board"  
+  },
+  {
+    "id": "2", 
+    "name": "Edging" 
+  }
+]
