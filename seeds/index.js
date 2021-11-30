@@ -13,10 +13,10 @@ const {
 
 const seedAll = async () => {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
   } catch (error) {
     console.error(error);
-  };
+  }
 
   try {
     await User.bulkCreate(userData, {
@@ -25,30 +25,30 @@ const seedAll = async () => {
     });
   } catch (error) {
     console.error(error);
-  };
+  }
 
   // await Brand.bulkCreate(brandData, {
   //   individualHooks: true,
   //   returning: true,
   // });
-  try{
+  try {
     await Product.bulkCreate(productData, {
       individualHooks: true,
       returning: true,
-    });;
+    });
   } catch (error) {
     console.error(error);
-  };
+  }
 
-  try{
+  try {
     await Material.bulkCreate(materialData, {
       individualHooks: true,
       returning: true,
     });
   } catch (error) {
     console.error(error);
-  };
-  
+  }
+
   process.exit(0);
 };
 

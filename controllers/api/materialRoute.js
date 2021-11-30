@@ -1,20 +1,20 @@
 // importing express.router
 const router = require("express").Router();
 // importing models
-const { Product_Type, Product } = require("../../models");
+const { Material, Product } = require("../../models");
 
 // GET of products
 router.get("/", async (req, res) => {
   try {
-    const productTypeData = await Product_Type.findAll({
+    const materialData = await Material.findAll({
       include: [{ model: Product, atrributes: "name" }],
     });
 
-    const productTypes = productTypeData.forEach((productType) => {
-      productType.get({ plain: true });
+    const materials = materialData.forEach((material) => {
+      material.get({ plain: true });
     });
     res.render("homepage", {
-      productTypes,
+      materials,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
 // GET of products by id
 router.get("/:id", async (req, res) => {
   try {
-    const productTypeData = await Product_Type.findByPk(req.params.id, {
+    const materialData = await Material.findByPk(req.params.id, {
       include: [
         {
           model: Product,
@@ -33,10 +33,10 @@ router.get("/:id", async (req, res) => {
         },
       ],
     });
-    const productType = productTypeData.get({ plain: true });
+    const material = materialData.get({ plain: true });
 
-    res.render("productType", {
-      ...productType,
+    res.render("material", {
+      ...material,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -46,27 +46,27 @@ router.get("/:id", async (req, res) => {
 // POST of products
 router.post("/", async (req, res) => {
   try {
-    const NewProductType = Product_Type.create({
+    const newMaterial = Material.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(NewProductType);
+    res.status(200).json(newMaterial);
   } catch (err) {
     res.status(400).status, json(err);
   }
 });
 //UPDATE of products
 router.put("/:id", (req, res) => {
-  Product_Type.update(req.body, { where: { id: req.params.id } })
-    .then((productTypeData) => {
-      if (!productTypeData[0]) {
+  Material.update(req.body, { where: { id: req.params.id } })
+    .then((materialData) => {
+      if (!materialData[0]) {
         res
           .status(404)
-          .json({ message: "No Product Type found with this id!" });
+          .json({ message: "No material Type found with this id!" });
         return;
       }
-      res.json(productTypeData);
+      res.json(materialData);
     })
     .catch((err) => {
       console.log(err);
@@ -76,15 +76,15 @@ router.put("/:id", (req, res) => {
 // DELETE of products
 router.delete("/:id", async (req, res) => {
   try {
-    const productTypeData = await Product_Type.destroy({
+    const materialData = await Material.destroy({
       where: {
         id: req.params.id,
       },
     });
-    if (!productTypeData) {
-      res.status(404).json({ message: "No product type exists with this ID" });
+    if (!materialData) {
+      res.status(404).json({ message: "No material type exists with this ID" });
     }
-    res.status(200).json(productTypeData);
+    res.status(200).json(materialData);
   } catch (err) {
     res.status(500).json(err);
   }

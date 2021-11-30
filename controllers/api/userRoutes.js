@@ -61,5 +61,15 @@ router.post("/logout", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    await User.findByPk(req.params.id, {
+      attributes: { exclude: ["password", "email"] },
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // export
 module.exports = router;
