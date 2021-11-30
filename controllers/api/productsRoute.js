@@ -1,22 +1,20 @@
 // importing express.router
 const router = require("express").Router();
 // importing models
-const { Product_Type, Product } = require("../../models");
+const { Product } = require("../../models");
 
 // GET of products
 router.get("/", async (req, res) => {
   try {
-    const productData = await Product.findAll({
-      include: [{ model: Product_Type, atrributes: "name" }],
-    });
+    const productData = await Product.findAll();
 
     const products = productData.forEach((product) => {
       product.get({ plain: true });
     });
-    res.render("homepage", {
-      products,
-      logged_in: req.session.logged_in,
-    });
+    // res.render("homepage", {
+    //   products,
+    //   logged_in: req.session.logged_in,
+    // });
   } catch (err) {
     res.status(500).json(err);
   }
