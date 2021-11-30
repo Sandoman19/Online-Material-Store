@@ -1,16 +1,14 @@
 // const brandData = require("./brandData.json");
-const materialData = require("./materialData.json");
 const productData = require("./productData.json");
+const materialData = require("./materialData.json");
 const userData = require("./userDate.json");
-const productMaterialData = require("./productMaterial.json");
 
 const sequelize = require("../config/connection");
 const {
   User,
   // Brand,
-  Material,
   Product,
-  ProductMaterial,
+  Material,
 } = require("../models");
 
 const seedAll = async () => {
@@ -44,15 +42,6 @@ const seedAll = async () => {
 
   try{
     await Material.bulkCreate(materialData, {
-      individualHooks: true,
-      returning: true,
-    });
-  } catch (error) {
-    console.error(error);
-  };
-
-  try{
-    await ProductMaterial.bulkCreate(productMaterialData, {
       individualHooks: true,
       returning: true,
     });

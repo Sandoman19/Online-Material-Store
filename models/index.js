@@ -2,7 +2,6 @@ const User = require("./User");
 const Product = require("./Product");
 const Brand = require("./Brand");
 const Material = require("./Material");
-const ProductMaterial = require("./ProductMaterial");
 
 // Brand.hasMany(Product, {
 //   foreignKey: "brand_id",
@@ -14,14 +13,11 @@ const ProductMaterial = require("./ProductMaterial");
 
 Product.hasMany(Material, {
   foreignKey: "product_id",
+  onDelete: "CASCADE"
 });
 
-Material.belongsToMany(Product, {
-  through: {
-    model: ProductMaterial,
-    unique: false,
-  },
-  as: "product_material",
+Material.belongsTo(Product, {
+  foreignKey: "product_id",
 });
 
-module.exports = { User, Product, Material, ProductMaterial };
+module.exports = { User, Product, Material };
