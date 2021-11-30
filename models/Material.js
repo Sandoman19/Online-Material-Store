@@ -20,7 +20,7 @@ Material.init(
       allowNull: false,
     },
     product_code: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     length: {
@@ -39,17 +39,11 @@ Material.init(
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
-    brand_id: {
+    product_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "brand",
+        model: "product",
         key: "id",
-      },
-      product_id: {
-        references: {
-          model: "product",
-          key: "id",
-        },
       },
     },
   },

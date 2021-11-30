@@ -1,15 +1,14 @@
 [
   {
-    "id": "0", 
-    "name": "Stone"
-  },
-  {
     "id": "1", 
-    "name": "Pre Finnished Board"
-
+    "type": "Stone"
   },
   {
     "id": "2", 
-    "name": "Edging"
+    "type": "Pre Finnished Board"
+  },
+  {
+    "id": "3", 
+    "type": "Edging"
   }
 ]

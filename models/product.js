@@ -15,19 +15,19 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    brand_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "brand",
-        key: "id",
-      },
-    },
+    // brand_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "brand",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "material",
+    modelName: "product",
   }
 );
 
