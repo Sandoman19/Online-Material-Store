@@ -6,7 +6,7 @@ const { User } = require("../models");
 const withAuth = require("../units/auth");
 
 // GET route with AUTH and render of homepage
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll({
       atrributes: { exlude: ["password"] },
@@ -25,10 +25,9 @@ router.get("/", withAuth, async (req, res) => {
 // GET route to redirect to login
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/");
+    res.redirect("/homepage");
     return;
   }
-
   res.render("login");
 });
 // export

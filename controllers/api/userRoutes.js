@@ -6,12 +6,14 @@ const { User } = require("../../models");
 //Create a new user
 router.post("/", async (req, res) => {
   try {
-    const newUser = req.body;
-    // hash the password from 'req.body' and save to newUser
-    newUser.password = await bcrypt.hash(req.body.password, 10);
-    // create the newUser with the hashed password and save to DB
-    const userData = await User.create(newUser);
-    res.status(200).json(userData);
+    const userData = await User.create(req.body);
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(userData);
+    });
   } catch (err) {
     res.status(400).json(err);
   }
@@ -65,6 +67,29 @@ router.get("/:id", async (req, res) => {
   try {
     await User.findByPk(req.params.id, {
       attributes: { exclude: ["password", "email"] },
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id, {
+      attributes: { exclude: ["password"] },
+      include: [
+        {
+          model: Post,
+          attributes: ["id", "title", "content", "date_created"],
+        },
+      ],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render("dashboard", {
+      ...user,
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
