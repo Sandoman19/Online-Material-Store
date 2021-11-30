@@ -5,7 +5,7 @@ const productRoutes = require("./productsRoute");
 // import user routes
 const userRoutes = require("./userRoutes");
 // import productType routes
-const materialRoute = require("./materials");
+const materialRoute = require("./materialRoute");
 
 router.use("/users", userRoutes);
 router.use("/products", productRoutes);
