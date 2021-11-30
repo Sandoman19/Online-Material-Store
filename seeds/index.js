@@ -7,38 +7,59 @@ const productMaterialData = require("./productMaterial.json");
 const sequelize = require("../config/connection");
 const {
   User,
-  Brand,
+  // Brand,
   Material,
   Product,
   ProductMaterial,
 } = require("../models");
 
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
+  try {
+    await sequelize.sync({ force: true });
+  } catch (error) {
+    console.error(error);
+  };
 
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  try {
+    await User.bulkCreate(userData, {
+      individualHooks: true,
+      returning: true,
+    });
+  } catch (error) {
+    console.error(error);
+  };
 
   // await Brand.bulkCreate(brandData, {
   //   individualHooks: true,
   //   returning: true,
   // });
-  await Product.bulkCreate(productData, {
-    individualHooks: true,
-    returning: true,
-  });
-  await Material.bulkCreate(materialData, {
-    individualHooks: true,
-    returning: true,
-  });
+  try{
+    await Product.bulkCreate(productData, {
+      individualHooks: true,
+      returning: true,
+    });;
+  } catch (error) {
+    console.error(error);
+  };
 
-  await ProductMaterial.bulkCreate(productMaterialData, {
-    individualHooks: true,
-    returning: true,
-  });
+  try{
+    await Material.bulkCreate(materialData, {
+      individualHooks: true,
+      returning: true,
+    });
+  } catch (error) {
+    console.error(error);
+  };
 
+  try{
+    await ProductMaterial.bulkCreate(productMaterialData, {
+      individualHooks: true,
+      returning: true,
+    });
+  } catch (error) {
+    console.error(error);
+  };
+  
   process.exit(0);
 };
 
