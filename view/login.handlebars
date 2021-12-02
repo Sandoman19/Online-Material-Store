@@ -1,1 +1,49 @@
 {{!-- make login page --}}
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
+    <form class="form login-form">
+      <div class="form-group">
+        <span  for="email-login" class="input-group-text" id="basic-addon1">Email</span>
+        <input id="email-login" type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <br>
+      <div class="form-group">
+        <span  for="password-login" class="input-group-text" id="basic-addon1">Password</span>
+        <input class="form-control" type="password" id="password-login" aria-describedby="basic-addon1" />
+      </div>
+      <br>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <span  for="name-signup" class="input-group-text" id="basic-addon1">Name</span>
+        <input class="form-control" type="text" id="name-signup" />
+      </div>
+      <br>
+      <div class="form-group">
+        <span  for="email-signup" class="input-group-text" id="basic-addon1">Email</span>
+        <input class="form-control" type="text" id="email-signup" id="basic-addon1" />
+      </div>
+      <br>
+
+      <div class="form-group">
+        <span  for="password-signup" class="input-group-text" id="basic-addon1">Password</span>
+        <input class="form-control" type="password" id="password-signup" />
+      </div>
+      <br>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script src="/js/login.js"></script>
