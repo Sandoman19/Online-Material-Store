@@ -2,43 +2,69 @@
 const router = require("express").Router();
 // importing models
 const { Material, Product } = require("../../models");
+const { sequelize } = require("../../models/User");
+
+const withAuth = require("../../units/auth");
 
 // GET of products
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const materialData = await Material.findAll({
-      include: [{ model: Product, atrributes: "name" }],
+      include: [{ model: Product, atrributes: "type" }],
     });
+
+    const materials = materialData.map((material) =>
+      material.get({ plain: true })
+    );
+
+    res.render("materials", {
+      ...materials,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/type", withAuth, async (req, res) => {
+  try {
+    const materialData = await Material.findAll();
 
     const materials = materialData.forEach((material) => {
       material.get({ plain: true });
     });
-    res.json(materials);
+    res.render("materials", {
+      ...materials,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // GET of products by id
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const materialData = await Material.findByPk(req.params.id, {
       include: [
         {
           model: Product,
-          atrributes: "name",
+          atrributes: "type",
         },
       ],
     });
     const material = materialData.get({ plain: true });
 
-    res.json(material);
+    res.render("materialInfo", {
+      ...material,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(404).json(err);
   }
 });
 // POST of products
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const newMaterial = Material.create({
       ...req.body,
@@ -51,7 +77,7 @@ router.post("/", async (req, res) => {
   }
 });
 //UPDATE of products
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Material.update(req.body, { where: { id: req.params.id } })
     .then((materialData) => {
       if (!materialData[0]) {
@@ -68,7 +94,7 @@ router.put("/:id", (req, res) => {
     });
 });
 // DELETE of products
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const materialData = await Material.destroy({
       where: {

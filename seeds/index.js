@@ -5,7 +5,7 @@ const userData = require("./userDate.json");
 
 const sequelize = require("../config/connection");
 const {
-  User,
+  // User,
   // Brand,
   Product,
   Material,
@@ -18,14 +18,14 @@ const seedAll = async () => {
     console.error(error);
   }
 
-  try {
-    await User.bulkCreate(userData, {
-      individualHooks: true,
-      returning: true,
-    });
-  } catch (error) {
-    console.error(error);
-  }
+  // try {
+  //   await User.bulkCreate(userData, {
+  //     individualHooks: true,
+  //     returning: true,
+  //   });
+  // } catch (error) {
+  //   console.error(error);
+  // }
 
   // await Brand.bulkCreate(brandData, {
   //   individualHooks: true,

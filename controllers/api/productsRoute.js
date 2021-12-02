@@ -2,23 +2,25 @@
 const router = require("express").Router();
 // importing models
 const { Product } = require("../../models");
-
+const withAuth = require("../../units/auth");
 // GET of products
 router.get("/", async (req, res) => {
   try {
     const productData = await Product.findAll();
 
-    const products = productData.forEach((product) => {
-      product.get({ plain: true });
+    const products = productData.map((post) => post.get({ plain: true }));
+
+    res.render("homepage", {
+      ...products,
+      logged_in: req.session.logged_in,
     });
-    res.json(products);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // GET of products by id
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id);
     const product = productData.get({ plain: true });
@@ -42,7 +44,7 @@ router.post("/", (req, res) => {
   }
 });
 //UPDATE of products
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Product.update(req.body, { where: { id: req.params.id } })
     .then((productData) => {
       if (!productData[0]) {
@@ -57,7 +59,7 @@ router.put("/:id", (req, res) => {
     });
 });
 // DELETE of products
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const productData = await Product.destroy({
       where: {
