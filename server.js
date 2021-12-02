@@ -28,6 +28,7 @@ const sess = {
   }),
 };
 
+app.use(session(sess));
 //let express know which engine to use
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");

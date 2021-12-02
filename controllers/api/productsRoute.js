@@ -11,10 +11,7 @@ router.get("/", async (req, res) => {
     const products = productData.forEach((product) => {
       product.get({ plain: true });
     });
-    res.render("homepage", {
-      products,
-      logged_in: req.session.logged_in,
-    });
+    res.json(products);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -26,10 +23,7 @@ router.get("/:id", async (req, res) => {
     const productData = await Product.findByPk(req.params.id);
     const product = productData.get({ plain: true });
 
-    res.render("product", {
-      ...product,
-      logged_in: req.session.logged_in,
-    });
+    res.json(product);
   } catch (err) {
     res.status(404).json(err);
   }

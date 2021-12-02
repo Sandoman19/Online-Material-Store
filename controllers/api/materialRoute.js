@@ -13,10 +13,7 @@ router.get("/", async (req, res) => {
     const materials = materialData.forEach((material) => {
       material.get({ plain: true });
     });
-    res.render("homepage", {
-      materials,
-      logged_in: req.session.logged_in,
-    });
+    res.json(materials);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -35,10 +32,7 @@ router.get("/:id", async (req, res) => {
     });
     const material = materialData.get({ plain: true });
 
-    res.render("material", {
-      ...material,
-      logged_in: req.session.logged_in,
-    });
+    res.json(material);
   } catch (err) {
     res.status(404).json(err);
   }
