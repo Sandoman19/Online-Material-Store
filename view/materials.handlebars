@@ -1,0 +1,16 @@
+{{#each materials as |material| }}
+<div>
+   <div class="card text-white bg-secondary" >
+  <h2 class="card-header">{{material.image}}</h2>
+  <div class="card-body ">
+    <p class="card-text">{{material.finish}}</p>
+  </div>
+  <div class="card-body ">
+    <p class="card-text">{{material.price}}</p>
+  </div>
+<div class="col-12 text-center">
+        <button class="btn " id="viewMoreBtn" ><a class=" post-link" href="/api/materials/{{material.id}}"> View More</a></button>
+      </div>
+</div>
+  <br>
+{{/each}}

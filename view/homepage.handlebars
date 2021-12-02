@@ -1,3 +1,18 @@
 {{!-- make homepage --}}
+{{#each products as |product| }}
+<div>
+   <div class="card text-white bg-secondary" >
+  {{!-- <h2 class="card-header">{{product.image}}</h2> --}}
+  <div class="card-body ">
+    <p class="card-text">{{product.type}}</p>
+  </div>
+  
+</div>
+<div class="col-12 text-center">
+        <button class="btn " id="viewBtn" ><a class=" post-link" href="/api/materials/type/{{product_id}}"> View Materials</a></button>
+      </div>
+</div>
+  <br>
+{{/each}}
 
 {{!-- shows list of cats --}}
