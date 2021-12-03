@@ -100,3 +100,7 @@ view
 
 workout how bcrypt will be getting use
 what framework we should use
+
+things to work on:
+shopping cart
+getting a order number working

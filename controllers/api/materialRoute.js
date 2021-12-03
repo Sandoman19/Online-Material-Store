@@ -18,7 +18,7 @@ router.get("/", withAuth, async (req, res) => {
     );
 
     res.render("materials", {
-      ...materials,
+      materials,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -30,11 +30,12 @@ router.get("/type", withAuth, async (req, res) => {
   try {
     const materialData = await Material.findAll();
 
-    const materials = materialData.forEach((material) => {
-      material.get({ plain: true });
+    const materials = materialData.map((material) => {
+      return material.get({ plain: true });
     });
     res.render("materials", {
-      ...materials,
+      // remove the ... and it works
+      materials,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -56,7 +57,7 @@ router.get("/:id", withAuth, async (req, res) => {
     const material = materialData.get({ plain: true });
 
     res.render("materialInfo", {
-      ...material,
+      material,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
