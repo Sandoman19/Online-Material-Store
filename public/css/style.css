@@ -1,0 +1,119 @@
+:root {
+  --primary: white;
+  --secondary: crimson;
+  --overlay: lightgrey;
+  --selected: black;
+  --dark: darkgrey;
+}
+
+i {
+  margin: 15px;
+  position: relative;
+  left: 20%;
+  color: var(--secondary);
+  font-size: 30px;
+}
+
+i:hover {
+  font-size: 40px;
+  margin: -10px;
+}
+
+.heading {
+  position: relative;
+  left: 5%;
+  width: 50%;
+  top: 30px;
+}
+nav {
+  width: 30px;
+  left: 50px;
+}
+
+#main-header {
+  background-color: var(--primary);
+  border-radius: 15px;
+  width: 70%;
+  margin-left: 15%;
+  box-shadow: 5px 5px var(--overlay);
+}
+
+body {
+  background-image: url("/images/marble.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+li {
+  position: relative;
+  left: 500px;
+  margin-left: 40px;
+  font-size: 20px;
+  bottom: 25px;
+}
+
+strong:hover {
+  color: var(--secondary);
+}
+
+.main-link:hover {
+  color: var(--secondary);
+}
+
+.btn {
+  background-color: var(--secondary);
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.btn:hover {
+  background-color: var(--overlay);
+}
+
+.materials-list {
+  margin-bottom: 20px;
+}
+
+.product-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+}
+.material-single {
+  text-align: center;
+  width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+#secondary-header {
+  margin-left: 25%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 35%;
+  text-align: center;
+  justify-content: center;
+}
+
+#footer-text {
+  color: var(--selected);
+}
+
+h2 {
+  color: var(--secondary);
+}

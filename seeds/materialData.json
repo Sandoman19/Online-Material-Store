@@ -7,7 +7,7 @@
     "thickness": "20",
     "price": "131.01",
     "product_code": "979046",
-    "product_id": 1    
+    "product_id": "2"    
   },
   {
     "colour": "Chalkstone",
@@ -17,7 +17,7 @@
     "thickness": "20",
     "price": "131.01",
     "product_code": "979046",
-    "product_id": 1 
+    "product_id": "1" 
   },  
   {
     "colour": "Terrazzino",
@@ -27,7 +27,7 @@
     "thickness": "20",
     "price": "150.38",
     "product_code": "985714",
-    "product_id": 1 
+    "product_id": "3" 
   },
   {
     "colour": "Grey Glitter",
@@ -37,7 +37,7 @@
     "thickness": "20",
     "price": "89.00",
     "product_code": "970263",
-    "product_id": 1 
+    "product_id": "1" 
   },
   {
     "colour": "Snow",
@@ -47,7 +47,7 @@
     "thickness": "20",
     "price": "111.89",
     "product_code": "1214132000",
-    "product_id": 1 
+    "product_id": "2" 
   },
   {
     "colour": "New Frost",
@@ -57,7 +57,7 @@
     "thickness": "20",
     "price": "139.00",
     "product_code": "DISCONTINUED",
-    "product_id": 1 
+    "product_id": "3" 
   },
   {
     "colour": "Unique Calcatta",
@@ -67,7 +67,7 @@
     "thickness": "20",
     "price": "445.12",
     "product_code": "982753",
-    "product_id": 1 
+    "product_id": "1" 
   },
   {
     "colour": "Trinity",
@@ -77,6 +77,6 @@
     "thickness": "20",
     "price": "261.22",
     "product_code": "SA-TY1541",
-    "product_id": 1 
+    "product_id": "2" 
   }
 ]

@@ -7,15 +7,25 @@
   <title>Materials Online</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
- {{!-- <link rel="stylesheet" href="/css/style.css"/> --}}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css"/> 
 </head> 
 <body>
+  
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
+      <div id="secondary-header">
+<i class="fab fa-facebook-f main-link" ></i> 
+<i class="fab fa-instagram main-link" ></i>
+<i class="fab fa-pinterest main-link" ></i>
+<i class="fab fa-linkedin-in main-link" ></i>
+<i class="fab fa-youtube main-link" ></i>
+</div>
+  <div id="main-header">
+      <h1 class="heading">
         Materials Online
       </h1>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light main-nav ">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,32 +33,33 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link active main-link" href="/"><strong>Home</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/api/materials">Materials</a>
+          <a class="nav-link active main-link" href="/api/materials"><strong>Materials</strong></a>
         </li>
         {{#if logged_in}}
         <li class="nav-item">
-          <a class="nav-link active" href="/" class="no-button" id="logout">logout</a>
+          <a class="nav-link active main-link" href="/" class="no-button" id="logout"><strong>Logout</strong></a>
         </li>
         {{else}}
         <li class="nav-item">
-        <a class="nav-link active" href="/login">login</a>
+        <a class="nav-link active main-link" href="/login"><strong>Login</strong></a>
         </li>
         {{/if}}
       </ul>
     </div>
   </div>
 </nav>
+</div>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer class="fixed-bottom start-0">
-      <p> Proudly Designed by 
-        <a id="footer-text" href="https://siddysixsmith.github.io/Portfolio/">Daniel Sixsmith</a> </p>
+    <footer>
+      <p> Proudly built by 
+        <a id="footer-text" href="https://siddysixsmith.github.io/Portfolio/">Daniel Sixsmith</a>, <a id="footer-text" href="https://siddysixsmith.github.io/Portfolio/">Aaron Sando</a>, <a id="footer-text" href="https://siddysixsmith.github.io/Portfolio/">Sophie D</a> </p>
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 

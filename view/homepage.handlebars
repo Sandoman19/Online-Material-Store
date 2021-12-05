@@ -1,18 +1,20 @@
 {{!-- make homepage --}}
+<div class="product-flex">
 {{#each products as |product| }}
-<div>
-   <div class="card text-white bg-secondary" >
-  {{!-- <h2 class="card-header">{{product.image}}</h2> --}}
+<div class="product-item">
+   <div class="card text-white bg-secondary " >
+   <img class="card-header">{{product.image.img}}</img>
   <div class="card-body ">
-    <p class="card-text">{{product.type}}</p>
+    <h3 class="card-text">{{product.type}}</h3>
   </div>
-  
-</div>
-<div class="col-12 text-center">
-        <button class="btn " id="viewBtn" ><a class=" post-link" href="/api/materials/type/{{product_id}}"> View Materials</a></button>
+  <br>
+  <br>
+  <br>
+  <div class="col-12 text-center">
+       <a class=" post-link" href="/api/materials/"> <button class="btn " id="viewBtn" >View Material</button></a>
       </div>
 </div>
-  <br>
+</div>
 {{/each}}
-
+</div>
 {{!-- shows list of cats --}}

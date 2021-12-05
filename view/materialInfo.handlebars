@@ -1,6 +1,6 @@
 {{!-- make product info page --}}
-
-<div>
+<div class="product-flex">
+<div class="material-single">
    <div class="card text-white bg-secondary" >
   <img src="image/"class="card-header">{{material.image}}
 
@@ -14,47 +14,19 @@
 <div class="card-body ">
     <p class="card-text">Product Code: {{material.product_code}}</p>
   </div>
-
   <div class="card-body ">
     <p class="card-text">Price: ${{material.price}}</p>
   </div>
+  <div class="col-12 text-center">
+        <button class="btn " id="purchaseBtn" ><a class=" post-link" href="/"> Purchase Material</a></button>
+      </div>
+</div>
 </div>
 
+  
+  
 
-  <div class="col-12 text-center">
-        <button class="btn " id="purchaseBtn" ><a class=" post-link" href="#"> Purchase Material</a></button>
-      </div>
-  <br>
-
-<script>
-
-  const purchaseBtn = document.getElementById('purchaseBtn');
-
-  purchaseBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    // send a post req to send order email
-    fetch('/api/materials/{{ material.id }}/confirm-order', {
-      method: 'POST',
-      headers: {
-        'content-type': 'aplication/json',
-        'accept': 'application/json',
-      }
-    }).then(response => {
-      if(!response.ok){
-        alert('You fucked up');
-
-      }else{
-        // once done, alert sayign 'invoice sent'
-
-        alert('Invoice sent');
-        //then redirect to home
-        window.location.href = '/'
-      }
-    })
-
-  })
-
-</script>
+ <script src="/js/materialInfo.js"></script>
 
 
 {{!-- all relivent info --}}

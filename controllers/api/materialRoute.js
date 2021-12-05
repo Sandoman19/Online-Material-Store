@@ -26,7 +26,7 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/type", withAuth, async (req, res) => {
+router.get("/type/:id", withAuth, async (req, res) => {
   try {
     const materialData = await Material.findAll();
 
