@@ -3,7 +3,7 @@ const purchaseBtn = document.getElementById("purchaseBtn");
 purchaseBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const materialId = event.currentTarget.getAttribute("data-material-id")
+  const materialId = event.currentTarget.getAttribute("data-material-id");
   // send a post req to send order email
   fetch("/api/materials/" + materialId + "/confirm-order", {
     method: "POST",
@@ -23,3 +23,20 @@ purchaseBtn.addEventListener("click", (event) => {
     }
   });
 });
+
+function goBack() {
+  window.history.back();
+}
+
+const button = document.getElementById("purchaseBtn");
+
+button.addEventListener("click", disableButton);
+
+function disableButton() {
+  button.disabled = true;
+  button.value = "Disabled";
+  window.setTimeout(function () {
+    button.disabled = false;
+    button.value = "Enabled";
+  }, 5000);
+}
