@@ -93,9 +93,11 @@ a {
 }
 .material-single {
   text-align: center;
-  width: 600px;
+  width: 400px;
+  height: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
+  margin-bottom: 100px;
 }
 
 #secondary-header {
@@ -116,4 +118,20 @@ footer {
 
 h2 {
   color: var(--secondary);
+}
+
+.home-image {
+  height: 200px;
+}
+
+.materials-image {
+  height: 200px;
+}
+
+.all {
+  text-align: center;
+}
+
+.materialInfo-image {
+  height: 200px;
 }

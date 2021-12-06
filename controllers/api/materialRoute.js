@@ -8,15 +8,13 @@ const withAuth = require("../../units/auth");
 
 // GET of products
 router.get("/", withAuth, async (req, res) => {
-
   const product_id = req.query.product_id;
   try {
-
     const materialData = await Material.findAll({
       where: {
         product_id: product_id,
       },
-      include: [{ model: Product}],
+      include: [{ model: Product }],
     });
 
     const materials = materialData.map((material) =>
@@ -29,6 +27,22 @@ router.get("/", withAuth, async (req, res) => {
     });
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
+  }
+});
+router.get("/all-materials", async (req, res) => {
+  try {
+    const materialData = await Material.findAll();
+
+    const materials = materialData.map((material) => {
+      return material.get({ plain: true });
+    });
+    res.render("materials", {
+      // remove the ... and it works
+      materials,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
     res.status(500).json(err);
   }
 });
@@ -57,7 +71,6 @@ router.get("/:id", withAuth, async (req, res) => {
       include: [
         {
           model: Product,
-          
         },
       ],
     });

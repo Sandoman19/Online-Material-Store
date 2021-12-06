@@ -3,7 +3,7 @@
   <div class="material-single">
     <div class="card text-white bg-secondary" >
 
-    <img src="{{material.image}}" class="card-header"/>
+    <img src="{{material.image}}" class="card-header materialInfo-image"/>
 
     <h3 class="card-header">Material Specs</h3>
 
@@ -20,7 +20,10 @@
       <p class="card-text">Price: ${{material.price}}</p>
     </div>
     <div class="col-12 text-center">
-      <button class="btn" data-material-id="{{ material.id }}" id="purchaseBtn" ><a class=" post-link" href="/"> Purchase Material</a></button>
+      <button class="btn" data-material-id="{{ material.id }}" id="purchaseBtn" type="button" value="Enabled"><a class=" post-link" href="/"> Purchase Material</a></button>
+    </div>
+    <div class="col-12 text-center">
+      <button class="btn" id="back" onclick="goBack()">Back</button>
     </div>
 
   </div>
