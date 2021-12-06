@@ -3,16 +3,11 @@ This is an online store for order materials from a cabinetmaker.
 We came up with the idea from one of the group who work for the cabinetmaker and could see the real world application.
 
 ## User Stories
-* As admin, I would like to CREATE new materials
-* As admin, I would like to UPDATE materials
-* As admin, I would like to DELETE materials
+* As a user, I would like to see a homepage where I can log in to the site with my login details.
+* As a user, I would like to READ and access a database of materials.
+* As a user, I would like to confirm my item and receive an invoice to my email.
 
-* As a user, I would like to see a homepage where I can log in to the site with my login details
-* As a user, I would like to READ and access a database of materials
-* As a user, I would like to add selected materials to the cart
-* As a user, I would like to confirm items in chat and receive an invoice to my email
-
-### Acceptance Criteria
+## Acceptance Criteria
 
 * It's done when the `/` homepage route renders a login page.
 
@@ -86,29 +81,30 @@ We came up with the idea from one of the group who work for the cabinetmaker and
  
     * `product_id`: foreign key that references `product.id`   
 
-screenshots of project:
+## screenshots of project:
 
 
 
-Framework used
+## Framework used
 we use Handlebars and Bootstrap
 
-Features
+## Features
 the key features of this project easy of use and functionality 
 
-Installation
-
-
-Contribute
+## Contribute
 Daniel Sixsmith, Aaron Sando and Sophie de Jong
 
-License
+## License
 MIT
 
-Improvment ideas:
+## Improvment ideas:
 add button to add item to cart from the product screen
 add a shopping cart
 getting a purchase number working
 prices are per m2 can you think of a way to make it work out the price
 have we done a delete route for then purchase material is done
 need a way of stopping doubling chicking when clicking the purchase button
+make admin centre
+* As admin, I would like to CREATE new materials
+* As admin, I would like to UPDATE materials
+* As admin, I would like to DELETE materials
