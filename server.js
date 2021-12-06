@@ -4,6 +4,9 @@ const express = require("express");
 const session = require("express-session");
 const { engine } = require("express-handlebars");
 const routes = require("./controllers");
+// // Import the custom helper methods
+// const helpers = require('./units/helper');
+// const hbs = exphbs.create({ helpers });
 
 // import sequelize
 const sequelize = require("./config/connection");

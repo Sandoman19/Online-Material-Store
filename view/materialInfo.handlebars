@@ -1,30 +1,33 @@
 {{!-- make product info page --}}
 <div class="product-flex">
-<div class="material-single">
-   <div class="card text-white bg-secondary" >
-  <img src="image/"class="card-header">{{material.image}}
+  <div class="material-single">
+    <div class="card text-white bg-secondary" >
 
-  <h3 class="card-header">Material Specs</h3>
-  <div class="card-body ">
-    <p class="card-text">Colour: {{material.colour}} {{material.finish}}</p>
+    <img src="{{material.image}}" class="card-header"/>
+
+    <h3 class="card-header">Material Specs</h3>
+
+    <div class="card-body ">
+      <p class="card-text">Colour: {{material.colour}} {{material.finish}}</p>
+    </div>
+    <div class="card-body ">
+      <p class="card-text">Size: {{material.length}}mm x {{material.width}}mm x {{material.thickness}}mm</p>
+    </div>
+    <div class="card-body ">
+      <p class="card-text">Product Code: {{material.product_code}}</p>
+    </div>
+    <div class="card-body ">
+      <p class="card-text">Price: ${{material.price}}</p>
+    </div>
+    <div class="col-12 text-center">
+      <button class="btn" data-material-id="{{ material.id }}" id="purchaseBtn" ><a class=" post-link" href="/"> Purchase Material</a></button>
+    </div>
+
   </div>
-  <div class="card-body ">
-    <p class="card-text">Size: {{material.length}}x{{material.width}}x{{material.thickness}}</p>
-  </div>
-<div class="card-body ">
-    <p class="card-text">Product Code: {{material.product_code}}</p>
-  </div>
-  <div class="card-body ">
-    <p class="card-text">Price: ${{material.price}}</p>
-  </div>
-  <div class="col-12 text-center">
-        <button class="btn " id="purchaseBtn" ><a class=" post-link" href="/"> Purchase Material</a></button>
-      </div>
-</div>
 </div>
 
-  
-  
+{{!-- {{math 100 '-' 5}} --}}
+
 
  <script src="/js/materialInfo.js"></script>
 

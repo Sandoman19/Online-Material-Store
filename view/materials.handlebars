@@ -2,12 +2,15 @@
 {{#each materials as |material| }}
 <div class="product-item">
    <div class="card text-white bg-secondary" >
-  <h2 class="card-header">{{material.image}}</h2>
+  <img src="{{material.image}}" class="card-header"/>
   <div class="card-body ">
-    <p class="card-text">{{material.colour}} {{material.finish}}</p>
+    <p class="card-text">Colour: {{material.colour}} {{material.finish}}</p>
+  </div>
+    <div class="card-body ">
+    <p class="card-text">Size: {{material.length}}mm x {{material.width}}mm x {{material.thickness}}mm</p>
   </div>
   <div class="card-body ">
-    <p class="card-text">${{material.price}}</p>
+    <p class="card-text">Price: ${{material.price}}</p>
   </div>
 <div class="col-12 text-center">
         <button class="btn " id="viewMoreBtn" ><a class=" post-link" href="/api/materials/{{material.id}}"> View More</a></button>

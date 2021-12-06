@@ -1,14 +1,17 @@
 [
   {
     "id": "1", 
-    "type": "Stone"
+    "type": "Stone",
+    "image": "/images/stone-rack.jpg"
   },
   {
     "id": "2", 
-    "type": "Pre Finnished Board"
+    "type": "Pre Finnished Board",
+    "image": "/images/Prefinished-MDF-boards.jpg"
   },
   {
     "id": "3", 
-    "type": "Edging"
+    "type": "Edging",
+    "image": "/images/edge-rack.jpg"
   }
 ]

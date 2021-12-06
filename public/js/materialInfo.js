@@ -2,8 +2,10 @@ const purchaseBtn = document.getElementById("purchaseBtn");
 
 purchaseBtn.addEventListener("click", (event) => {
   event.preventDefault();
+
+  const materialId = event.currentTarget.getAttribute("data-material-id")
   // send a post req to send order email
-  fetch("/api/materials/{{ material.id }}/confirm-order", {
+  fetch("/api/materials/" + materialId + "/confirm-order", {
     method: "POST",
     headers: {
       "content-type": "aplication/json",
@@ -11,7 +13,7 @@ purchaseBtn.addEventListener("click", (event) => {
     },
   }).then((response) => {
     if (!response.ok) {
-      alert("You fucked up");
+      alert("Something broke while confiming order!");
     } else {
       // once done, alert sayign 'invoice sent'
 

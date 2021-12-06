@@ -3,7 +3,7 @@
 {{#each products as |product| }}
 <div class="product-item">
    <div class="card text-white bg-secondary " >
-   <img class="card-header">{{product.image.img}}</img>
+   <img class="card-header" src="{{product.image}}"></img>
   <div class="card-body ">
     <h3 class="card-text">{{product.type}}</h3>
   </div>
@@ -11,7 +11,7 @@
   <br>
   <br>
   <div class="col-12 text-center">
-       <a class=" post-link" href="/api/materials/"> <button class="btn " id="viewBtn" >View Material</button></a>
+       <a class=" post-link" href="/api/materials?product_id={{product.id}}"> <button class="btn " id="viewBtn" >View Material</button></a>
       </div>
 </div>
 </div>

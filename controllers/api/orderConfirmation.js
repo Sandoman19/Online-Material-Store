@@ -30,6 +30,11 @@ router.post("/materials/:id/confirm-order", async (req, res) => {
 
   // get the material model
   const material = await Material.findByPk(req.params.id);
+  console.log(material)
+  if (!material){
+    res.status(400).json({ data: "material not found" });
+    return
+  }
   try {
     const order = {
       colour: material.colour,
@@ -55,7 +60,7 @@ router.post("/materials/:id/confirm-order", async (req, res) => {
     
   } catch (e) {
     console.log(e);
-    res.status(500).send("Something broke!");
+    res.status(500).send("Something broke! the eamil confirmation did not send");
   }
 });
 
