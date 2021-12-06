@@ -1,5 +1,6 @@
 # Online Material Store
-Online store for order materials
+This is an online store for order materials from a cabinetmaker.
+We came up with the idea from one of the group who work for the cabinetmaker and could see the real world application.
 
 ## User Stories
 * As admin, I would like to CREATE new materials
@@ -55,12 +56,14 @@ Online store for order materials
     * `password`
       `validate`: {
         len: [8],
-      },
+    },
 
   * `Product`
     * `id`: primary key
 
     * `type`
+
+    * `image`
 
   * `Material`
     * `id`
@@ -78,29 +81,34 @@ Online store for order materials
     * `thickness`
 
     * `price`
- 
-    * `brand_id`: foreign key that references `brand.id`   
 
-  * `Brand`
-    * `id`: primary key
-
-    * `name`
+    * `image`
  
     * `product_id`: foreign key that references `product.id`   
 
-  
-Sando:
-models and seeds
+screenshots of project:
 
-Dan:
-config, controllers and view
 
-Sophie:
-view
 
-workout how bcrypt will be getting use
-what framework we should use
+Framework used
+we use Handlebars and Bootstrap
 
-things to work on:
-shopping cart
-getting a order number working
+Features
+the key features of this project easy of use and functionality 
+
+Installation
+
+
+Contribute
+Daniel Sixsmith, Aaron Sando and Sophie de Jong
+
+License
+MIT
+
+Improvment ideas:
+add button to add item to cart from the product screen
+add a shopping cart
+getting a purchase number working
+prices are per m2 can you think of a way to make it work out the price
+have we done a delete route for then purchase material is done
+need a way of stopping doubling chicking when clicking the purchase button

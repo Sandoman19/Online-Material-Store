@@ -39,7 +39,7 @@ Material.init(
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
-    // addd images?
+    // add images?
     image: {
       type: DataTypes.TEXT,
       allowNull: true,

@@ -3,7 +3,8 @@ require("dotenv").config()
 const nodemailer = require("nodemailer")
 const router = require('express').Router();
 const hbs = require("nodemailer-express-handlebars");
-const { Material } = require("../../models");
+const { Material, User } = require("../../models");
+const withAuth = require("../../units/auth");
 
 const transporter = nodemailer.createTransport({
   host:  process.env.SMTP_HOST,
@@ -25,7 +26,7 @@ const options = {
 };
 
 transporter.use("compile", hbs(options));
-router.post("/materials/:id/confirm-order", async (req, res) => {
+router.post("/materials/:id/confirm-order", withAuth, async (req, res) => {
 
 
   // get the material model
@@ -36,6 +37,8 @@ router.post("/materials/:id/confirm-order", async (req, res) => {
     return
   }
   try {
+    const user = await User.findByPk(req.session.user_id);
+
     const order = {
       colour: material.colour,
       finish: material.finish,
@@ -46,9 +49,12 @@ router.post("/materials/:id/confirm-order", async (req, res) => {
       price: material.price
     };
 
+    console.log(req.session)
+    console.log(user)
+
     const mailInfo = {
       from: "shop@example.com",
-      to: req.session.user.email,
+      to: user.email,
       subject: "Order Confirmation",
       template: "orderConfirmation",
       context: order
