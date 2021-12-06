@@ -2,7 +2,7 @@
 const router = require("express").Router();
 // importing models
 const { Material, Product } = require("../../models");
-const { sequelize } = require("../../models/User");
+const { sequelize } = require("../../models/user");
 
 const withAuth = require("../../units/auth");
 
