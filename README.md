@@ -7,7 +7,7 @@ We came up with the idea from one of the group who work for the cabinetmaker and
 * As a user, I would like to READ and access a database of materials.
 * As a user, I would like to confirm my item and receive an invoice to my email.
 
-### Acceptance Criteria
+## Acceptance Criteria
 
 * It's done when the `/` homepage route renders a login page.
 
@@ -81,26 +81,23 @@ We came up with the idea from one of the group who work for the cabinetmaker and
  
     * `product_id`: foreign key that references `product.id`   
 
-screenshots of project:
+## screenshots of project:
 
 
 
-Framework used
+## Framework used
 we use Handlebars and Bootstrap
 
-Features
+## Features
 the key features of this project easy of use and functionality 
 
-Installation
-
-
-Contribute
+## Contribute
 Daniel Sixsmith, Aaron Sando and Sophie de Jong
 
-License
+## License
 MIT
 
-Improvment ideas:
+## Improvment ideas:
 add button to add item to cart from the product screen
 add a shopping cart
 getting a purchase number working
