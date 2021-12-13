@@ -51,6 +51,13 @@ Material.init(
         key: "id",
       },
     },
+    brand_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "brand",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,

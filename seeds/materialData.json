@@ -8,6 +8,7 @@
     "price": "131.01",
     "product_code": "979046",
     "product_id": "1", 
+    "brand_id": "1", 
     "image": "https://www.laminex.com.au/medias/p-ES-Chalkstone-RGB-1200x1200-LR.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wzMjQ4MzV8aW1hZ2UvanBlZ3xoMTQvaGU1Lzg4NjY5MjEwNTQyMzgvcF9FU19DaGFsa3N0b25lX1JHQl8xMjAweDEyMDBfTFIuanBnXzEyMDBXeDk3OUh8ZWJmYThmYjdhMjcyZGYzZmNiOWJkNmQ1MzBkNTg2ZjIwMzFiOTc2OGI4MzdkYWZlNGE2NWFjNDhhYTExMTlhMw"  
   },
   {
@@ -19,6 +20,7 @@
     "price": "131.01",
     "product_code": "979046",
     "product_id": "1", 
+    "brand_id": "1",  
     "image": "https://www.laminex.com.au/medias/p-ES-Chalkstone-RGB-1200x1200-LR.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wzMjQ4MzV8aW1hZ2UvanBlZ3xoMTQvaGU1Lzg4NjY5MjEwNTQyMzgvcF9FU19DaGFsa3N0b25lX1JHQl8xMjAweDEyMDBfTFIuanBnXzEyMDBXeDk3OUh8ZWJmYThmYjdhMjcyZGYzZmNiOWJkNmQ1MzBkNTg2ZjIwMzFiOTc2OGI4MzdkYWZlNGE2NWFjNDhhYTExMTlhMw"   
   },  
   {
@@ -30,6 +32,7 @@
     "price": "150.38",
     "product_code": "985714",
     "product_id": "1", 
+    "brand_id": "1",  
     "image": "https://www.laminex.com.au/medias/p-ES-Terrazzino-RGB-1200x1200-LR.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wyNDQzMzZ8aW1hZ2UvanBlZ3xoZDAvaDVmLzg4NjY5MjczNzg0NjIvcF9FU19UZXJyYXp6aW5vX1JHQl8xMjAweDEyMDBfTFIuanBnXzEyMDBXeDk3OUh8NTA1MDA5N2QzNmY0YTNhNTllNDdkZTAyOWMzOGJmNjBjMDNlNzQ2NWZlZTRhMTU0ZTgwMGY2ZTk1MDBjMDI2ZA"  
   },
   {
@@ -41,6 +44,7 @@
     "price": "89.00",
     "product_code": "970263",
     "product_id": "1", 
+    "brand_id": "2",  
     "image": "https://www.qstone.com.au/UploadImages/colour_palette_gallery/5fbb46221fd0f_grey-glitter.jpg"  
   },
   {
@@ -52,6 +56,7 @@
     "price": "111.89",
     "product_code": "1214132000",
     "product_id": "1", 
+    "brand_id": "3",  
     "image": "https://www.caesarstone.com.au/Portals/0/Images/Colours/2141.jpg"  
   },
   {
@@ -63,6 +68,7 @@
     "price": "139.00",
     "product_code": "DISCONTINUED",
     "product_id": "1", 
+    "brand_id": "2",  
     "image": "https://www.qstone.com.au/UploadImages/colour_palette_gallery/5fbb465c7294d_new-frost.jpg"  
   },
   {
@@ -74,6 +80,7 @@
     "price": "445.12",
     "product_code": "982753",
     "product_id": "1", 
+    "brand_id": "1",  
     "image": "https://www.laminex.com.au/medias/ES-Unique-Calacatta-Full-Slab.jpg?context=bWFzdGVyfGltYWdlc3wzNTk4MTR8aW1hZ2UvanBlZ3xoMjAvaDI3Lzg4NTg1ODY3MTAwNDYvRVMtVW5pcXVlLUNhbGFjYXR0YS1GdWxsLVNsYWIuanBnfGMwNjRlZTk4YjFhZThlYzA5YTIzYzQyNjQ5NGRlNDM0NjQ1MjA1NmMxMzE2MDc0ZjEyOWNlNmEyNTNmOTQ0NmI"    
   },
   {
@@ -84,7 +91,8 @@
     "thickness": "16",
     "price": "58.5",
     "product_code": "947910",
-    "product_id": "2", 
+    "product_id": "2",  
+    "brand_id": "5", 
     "image": "https://www.laminex.com.au/medias/p-Formica-Snowdrift-1200x1200s-1200Wx979H?context=bWFzdGVyfGltYWdlc3wzODM5NnxpbWFnZS9qcGVnfGg2Mi9oNjkvODg4MTE4Mzc1MjIyMi9wX0Zvcm1pY2EtU25vd2RyaWZ0LTEyMDB4MTIwMHNfMTIwMFd4OTc5SHxjYTIyM2U5ODgyN2IzNzMyZWJmZGY0MGEwMjI5MzgxZDE5YWIyOWVmYmU2OTNiNjFmZDRhNzNmNTJmY2Q1MzY1"    
   },
   {
@@ -96,6 +104,7 @@
     "price": "46.3",
     "product_code": "947895",
     "product_id": "2", 
+    "brand_id": "5",  
     "image": "https://www.laminex.com.au/medias/p-graphite-1200x1200s.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wxNDc2Mzd8aW1hZ2UvanBlZ3xoYmIvaGM2Lzg4ODA5MTE0ODI5MTAvcF9ncmFwaGl0ZV8xMjAweDEyMDBzLmpwZ18xMjAwV3g5NzlIfDlhMzY3NzIyYjY5OTk3MjBjNmU3ZTFkMzRlNmUxMDBkMjEzZmIxNWI5NjU1NWYwMjQxNDkwM2RkNjUxNjhlNjg"    
   },
   {
@@ -106,7 +115,8 @@
     "thickness": "16",
     "price": "83.7",
     "product_code": "947922",
-    "product_id": "2", 
+    "product_id": "2",   
+    "brand_id": "5", 
     "image": "https://www.laminex.com.au/medias/p-doe-skin-1200x1200s.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wxMTA1NjR8aW1hZ2UvanBlZ3xoNzUvaGFkLzg4ODA3ODY2MDQwNjIvcF9kb2Vfc2tpbl8xMjAweDEyMDBzLmpwZ18xMjAwV3g5NzlIfDUzNDg2YTAxZDJjOGU0NzhkYzM4ZGE3YTQ5MGJiOTMwOTdkNmUxZjc0ZThjNTk2NjkxNWNhNTk0ZjI5MzE2NDQ"    
   },
   {
@@ -117,7 +127,8 @@
     "thickness": "16",
     "price": "183.7",
     "product_code": "947922",
-    "product_id": "2", 
+    "product_id": "2",    
+    "brand_id": "6",  
     "image": "https://www.laminex.com.au/medias/p-LX-Black-RGB-1200x1200-LR.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wxMDYwOTZ8aW1hZ2UvanBlZ3xoY2YvaDQyLzg4NjY3NjU0MDYyMzgvcF9MWF9CbGFja19SR0JfMTIwMHgxMjAwX0xSLmpwZ18xMjAwV3g5NzlIfDQ1NzY4ZTNlNjViNTA0M2Y2ZDJhNDM1NmVkZjdiZjZkNTc4OWRhOWY2OTllMWNjZmZmODEzZGE4ZWE1YmI5Y2Q"    
   },
   {
@@ -128,7 +139,8 @@
     "thickness": "1",
     "price": "58.5",
     "product_code": "947910",
-    "product_id": "3", 
+    "product_id": "3",  
+    "brand_id": "5", 
     "image": "https://www.laminex.com.au/medias/p-Formica-Snowdrift-1200x1200s-1200Wx979H?context=bWFzdGVyfGltYWdlc3wzODM5NnxpbWFnZS9qcGVnfGg2Mi9oNjkvODg4MTE4Mzc1MjIyMi9wX0Zvcm1pY2EtU25vd2RyaWZ0LTEyMDB4MTIwMHNfMTIwMFd4OTc5SHxjYTIyM2U5ODgyN2IzNzMyZWJmZGY0MGEwMjI5MzgxZDE5YWIyOWVmYmU2OTNiNjFmZDRhNzNmNTJmY2Q1MzY1"    
   },
   {
@@ -139,7 +151,8 @@
     "thickness": "1",
     "price": "46.3",
     "product_code": "947895",
-    "product_id": "3", 
+    "product_id": "3",  
+    "brand_id": "5", 
     "image": "https://www.laminex.com.au/medias/p-graphite-1200x1200s.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wxNDc2Mzd8aW1hZ2UvanBlZ3xoYmIvaGM2Lzg4ODA5MTE0ODI5MTAvcF9ncmFwaGl0ZV8xMjAweDEyMDBzLmpwZ18xMjAwV3g5NzlIfDlhMzY3NzIyYjY5OTk3MjBjNmU3ZTFkMzRlNmUxMDBkMjEzZmIxNWI5NjU1NWYwMjQxNDkwM2RkNjUxNjhlNjg"    
   },
   {
@@ -151,6 +164,7 @@
     "price": "83.7",
     "product_code": "947922",
     "product_id": "3", 
+    "brand_id": "5",  
     "image": "https://www.laminex.com.au/medias/p-doe-skin-1200x1200s.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wxMTA1NjR8aW1hZ2UvanBlZ3xoNzUvaGFkLzg4ODA3ODY2MDQwNjIvcF9kb2Vfc2tpbl8xMjAweDEyMDBzLmpwZ18xMjAwV3g5NzlIfDUzNDg2YTAxZDJjOGU0NzhkYzM4ZGE3YTQ5MGJiOTMwOTdkNmUxZjc0ZThjNTk2NjkxNWNhNTk0ZjI5MzE2NDQ"    
   },
   {
@@ -162,6 +176,7 @@
     "price": "183.7",
     "product_code": "947922",
     "product_id": "3", 
+    "brand_id": "4",  
     "image": "https://www.laminex.com.au/medias/p-LX-Black-RGB-1200x1200-LR.jpg-1200Wx979H?context=bWFzdGVyfGltYWdlc3wxMDYwOTZ8aW1hZ2UvanBlZ3xoY2YvaDQyLzg4NjY3NjU0MDYyMzgvcF9MWF9CbGFja19SR0JfMTIwMHgxMjAwX0xSLmpwZ18xMjAwV3g5NzlIfDQ1NzY4ZTNlNjViNTA0M2Y2ZDJhNDM1NmVkZjdiZjZkNTc4OWRhOWY2OTllMWNjZmZmODEzZGE4ZWE1YmI5Y2Q"    
   }
 ]
